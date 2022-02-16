@@ -1,10 +1,9 @@
-﻿using System.IO;
-using System.Reflection;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Edge;
-using OpenQA.Selenium.Firefox;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Selenium.Test
 {
@@ -30,6 +29,7 @@ namespace Selenium.Test
         [Test]
         public void GoToIndex()
         {
+            Console.WriteLine("User name is :" + TestContext.Parameters["webAppUserName"]);
             _chrome.Navigate().GoToUrl("https://google.com/");
             //_edge.Navigate().GoToUrl("https://www.microsoft.com/");
             //_firefox.Navigate().GoToUrl("http://www.mozilla.org/");
