@@ -1,0 +1,10 @@
+trigger:
+- main
+
+pool:
+  vmimage: 'windows-latest'
+  
+steps:
+- task: VisualStudioTestPlatformInstaller@1
+  inputs:
+    packageselector: 'nugetOrg'
