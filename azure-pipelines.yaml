@@ -1,5 +1,0 @@
-trigger:
-- main
-
-pool:
-  vmimage: 'windows-latest'
